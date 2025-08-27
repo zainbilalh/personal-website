@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Bootstrap demo</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body style="background-color: #000000">
+    <div id="hero" class="pb-5">
+      <!-- Navbar -->
+      <div
+        id="navbar"
+        class="container-fluid position-fixed top-0 start-0 w-100 border-bottom border-white"
+        style="
+          z-index: 1000;
+          font-family: 'Poppins', sans-serif;
+          font-weight: 600;
+          transition: top 0.3s;
+        "
+      >
+        <div class="row justify-content-center align-items-center">
+          <div class="col-auto">
+            <nav class="d-flex flex-wrap justify-content-center gap-4 py-3">
+              <a class="navbar-brand text-white fw-bold" href="#">Home</a>
+              <a class="navbar-brand text-white fw-bold" href="#">About</a>
+              <a class="navbar-brand text-white fw-bold" href="#">Resume</a>
+              <a class="navbar-brand text-white fw-bold" href="#">Projects</a>
+              <a class="nav-link text-white fw-bold" href="#">Contact</a>
+            </nav>
+          </div>
+        </div>
+      </div>
+
+      <!-- Hero -->
+      <div
+        class="hero-section text-center d-flex flex-column justify-content-center align-items-center"
+        style="height: 95vh; padding-top: 5rem"
+      >
+        <h1 class="fw-bold">Zain Bilal</h1>
+        <h4 class="mb-4">Cornell Software Engineer</h4>
+        <div class="d-flex gap-4">
+          <a
+            href="https://github.com/zainbilalh"
+            target="_blank"
+            class="text-white fs-3"
+          >
+            <i class="bi bi-github"></i>
+          </a>
+          <a
+            href="https://linkedin.com/in/zain-h-bilal"
+            target="_blank"
+            class="text-white fs-3"
+          >
+            <i class="bi bi-linkedin"></i>
+          </a>
+          <a href="mailto:zb98@cornell.edu" class="text-white fs-3">
+            <i class="bi bi-envelope-fill"></i>
+          </a>
+        </div>
+      </div>
+
+      <div class="container-fluid py-5">
+        <div class="container w-50">
+          <h2 class="text-center mb-5 fw-bold">About me</h2>
+          <div class="about-container">
+            <img
+              src="my-photo.jpg"
+              alt="Zain Bilal"
+              class="about-photo me-5 mb-3"
+            />
+            <p>
+              I’m a computer scientist passionate about building products that
+              impact everyday life. I’m also Cornell class of 2028 in Computer
+              Science. My primary interests have been AI development,
+              competitive programming, and full-stack software projects, and the
+              list keeps expanding!
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Projects Section -->
+    <div class="container-fluid py-5" style="background-color: #eeebeb">
+      <div class="container text-center">
+        <h2 class="text-center mb-5 fw-bold" style="color: #ff7f50">
+          Projects
+        </h2>
+
+        <div class="project-grid">
+          <div
+            class="project-card position-relative d-flex flex-column align-items-center"
+          >
+            <a
+              href="https://cornellgympredict.streamlit.app/"
+              target="_blank"
+              tabindex="0"
+            >
+              <img src="project1.png" alt="Project 1" class="img-fluid" />
+              <div
+                class="project-overlay d-flex align-items-center justify-content-center"
+              >
+                <span>Cornell Gym Occupancy Predictor</span>
+              </div>
+            </a>
+          </div>
+          <div
+            class="project-card position-relative d-flex flex-column align-items-center"
+          >
+            <a
+              href="https://github.com/asalpeter/Trends-Final-Project"
+              target="_blank"
+              tabindex="0"
+            >
+              <img src="project2.png" alt="Project 2" class="img-fluid" />
+              <div
+                class="project-overlay d-flex align-items-center justify-content-center"
+              >
+                <span>Online Game + Leaderboards Gist</span>
+              </div>
+            </a>
+          </div>
+          <div
+            class="project-card position-relative d-flex flex-column align-items-center"
+          >
+            <a href="https://www.tryharbor.app/" target="_blank" tabindex="0">
+              <img src="project3.png" alt="Project 3" class="img-fluid" />
+              <div
+                class="project-overlay d-flex align-items-center justify-content-center"
+              >
+                <span>Harbor - Cornell Relationship App</span>
+              </div>
+            </a>
+          </div>
+          <div
+            class="project-card position-relative d-flex flex-column align-items-center"
+          >
+            <a href="https://project4-link.com" target="_blank" tabindex="0">
+              <img src="project4.jpg" alt="Project 4" class="img-fluid" />
+            </a>
+          </div>
+          <div
+            class="project-card position-relative d-flex flex-column align-items-center"
+          >
+            <a href="https://project5-link.com" target="_blank" tabindex="0">
+              <img src="project5.jpg" alt="Project 5" class="img-fluid" />
+            </a>
+          </div>
+          <div
+            class="project-card position-relative d-flex flex-column align-items-center"
+          >
+            <a href="https://project6-link.com" target="_blank" tabindex="0">
+              <img src="project6.jpg" alt="Project 6" class="img-fluid" />
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Contact Me Section -->
+    <section id="contact" class="text-center" style="min-height: 50vh">
+      <div class="container py-5">
+        <h2 class="fw-bold mb-5">Contact</h2>
+        <h3 class="mb-4">I'd love to connect with you!</h3>
+        <div class="row justify-content-center">
+          <!-- LinkedIn -->
+          <div class="col-12 col-md-4 mb-4">
+            <div class="contact-card p-4 rounded shadow-sm">
+              <a
+                href="https://www.linkedin.com/in/zain-h-bilal"
+                target="_blank"
+                class="text-decoration-none text-white"
+              >
+                <i class="bi bi-linkedin display-4 mb-3"></i>
+                <h5>LinkedIn</h5>
+              </a>
+            </div>
+          </div>
+
+          <!-- Phone -->
+          <div class="col-12 col-md-4 mb-4">
+            <div class="contact-card p-4 rounded shadow-sm">
+              <i class="bi bi-telephone display-4 mb-3"></i>
+              <h5>+1 (607) 697-5325</h5>
+            </div>
+          </div>
+
+          <!-- Email -->
+          <div class="col-12 col-md-4 mb-4">
+            <div class="contact-card p-4 rounded shadow-sm">
+              <a
+                href="mailto:zb98@cornell.edu"
+                class="text-decoration-none text-white"
+              >
+                <i class="bi bi-envelope display-4 mb-3"></i>
+                <h5>zb98@cornell.edu</h5>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <footer
+      class="bg-black text-white text-center py-3 border-top"
+      style="height: 10vh"
+    >
+      <p class="mb-0">© 2025 Zain Bilal. All Rights Reserved.</p>
+    </footer>
+  </body>
+
+  <body>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
+      crossorigin="anonymous"
+    ></script>
+    <script src="script.js"></script>
+  </body>
+</html>
