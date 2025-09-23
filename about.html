@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>About — Zain Bilal</title>
+    <link rel="stylesheet" href="style.css" />
+    <!-- Bootstrap Icons CDN -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css"
+    />
+    <style>
+      /* Minimal isolated styles for the about page when opened standalone */
+      body {
+        margin: 0;
+        font-family: "Poppins", sans-serif;
+        background: #fff;
+        color: #111;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        min-height: 100vh;
+      }
+      .about-shell {
+        padding: 48px;
+        max-width: 760px;
+      }
+      .about-grid {
+        display: grid;
+        grid-template-columns: 1fr 320px;
+        grid-template-areas: "journey photo";
+        gap: 28px;
+        align-items: start;
+        margin-top: 18px;
+      }
+
+      .about-journey {
+        grid-area: journey;
+      }
+      .about-photo {
+        grid-area: photo;
+      }
+
+      .about-journey h2 {
+        margin: 0 0 8px 0;
+        font-size: 1.35rem;
+        font-family: "Playfair Display", serif;
+      }
+
+      .about-journey p {
+        margin-bottom: 12px;
+        color: #444;
+      }
+
+      .about-photo img {
+        width: 100%;
+        height: auto;
+        border-radius: 10px;
+        object-fit: cover;
+        box-shadow: 0 8px 30px rgba(0, 0, 0, 0.08);
+      }
+
+      /* Fade-up animation */
+      @keyframes fadeUp {
+        from {
+          opacity: 0;
+          transform: translateY(10px);
+        }
+        to {
+          opacity: 1;
+          transform: translateY(0);
+        }
+      }
+
+      .fade-up {
+        opacity: 0;
+        transform: translateY(10px);
+      }
+
+      .fade-up.is-visible {
+        animation: fadeUp 620ms cubic-bezier(0.2, 0.8, 0.2, 1) both;
+      }
+
+      .about-contacts {
+        margin-top: 22px;
+        display: flex;
+        gap: 12px;
+      }
+
+      .contact-link {
+        display: inline-block;
+        padding: 8px 12px;
+        border-radius: 8px;
+        background: #f5f5f7;
+        color: #111;
+        text-decoration: none;
+        font-weight: 600;
+      }
+
+      .contact-link:hover {
+        background: #e9e9eb;
+      }
+      .contact-link .bi {
+        font-size: 1.05rem;
+        margin-right: 8px;
+        vertical-align: -0.08em;
+      }
+      h1 {
+        font-family: "Playfair Display", serif;
+        margin: 0 0 12px 0;
+        font-size: 2.4rem;
+      }
+      p {
+        color: #444;
+        line-height: 1.6;
+      }
+      /* Mobile: stack photo above journey text */
+      @media (max-width: 768px) {
+        .about-shell {
+          padding: 28px;
+          max-width: 92%;
+        }
+        .about-grid {
+          grid-template-columns: 1fr;
+          grid-template-areas: "photo" "journey";
+          gap: 16px;
+        }
+        .about-photo {
+          display: flex;
+          justify-content: center;
+        }
+        .about-photo img {
+          max-width: 320px;
+          margin: 0 auto;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="about-shell">
+      <div class="about-grid">
+        <div class="about-journey">
+          <p>
+            I began coding in high school and quickly grew passionate about
+            solving problems and creating useful tools. From competitive
+            programming to building web apps, I enjoy exploring new technologies
+            and turning them into practical projects that simplify workflows and
+            improve everyday life.
+          </p>
+          <p>
+            Outside of coding, I’m a big football fan—Barcelona is my favorite
+            team, and Messi is the greatest of all time in my eyes. I also enjoy
+            playing the guitar, and if I had to pick a spirit animal, it would
+            be a polar bear—especially Ice Bear from <em>We Bare Bears</em>.
+          </p>
+        </div>
+        <div class="about-photo fade-up">
+          <!-- Replace src with your actual photo -->
+          <img src="me.jpeg" alt="Zain Bilal" />
+        </div>
+      </div>
+
+      <div class="about-contacts">
+        <a
+          href="https://www.linkedin.com/in/zain-h-bilal"
+          target="_blank"
+          rel="noopener"
+          class="contact-link"
+          ><i class="bi bi-linkedin"></i>LinkedIn</a
+        >
+        <a
+          href="https://github.com/zainbilalh/"
+          target="_blank"
+          rel="noopener"
+          class="contact-link"
+          ><i class="bi bi-github"></i>GitHub</a
+        >
+        <a
+          href="https://calendly.com/zb98-cornell/new-meeting"
+          target="_blank"
+          rel="noopener"
+          class="contact-link"
+          ><i class="bi bi-calendar3"></i>Calendly</a
+        >
+      </div>
+      <script>
+        // Stagger reveal when the page (or iframe) loads
+        document.addEventListener("DOMContentLoaded", () => {
+          const targets = document.querySelectorAll(".fade-up");
+          targets.forEach((el, i) => {
+            setTimeout(() => el.classList.add("is-visible"), i * 160 + 120);
+          });
+        });
+      </script>
+    </div>
+  </body>
+</html>

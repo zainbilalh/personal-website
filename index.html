@@ -11,6 +11,26 @@
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
+    <!-- Top-right single-item navbar button (now non-fixed and includes a small popover) -->
+    <nav class="top-nav" aria-label="Primary">
+      <button
+        id="about-btn"
+        class="nav-button"
+        aria-haspopup="true"
+        aria-controls="about-pop"
+        aria-expanded="false"
+      >
+        About
+      </button>
+      <!-- Small inline popover that appears beneath the button (hidden by default) -->
+      <div id="about-pop" class="about-pop" role="region" aria-hidden="true">
+        <p>
+          Hi — I'm Zain. I'm a developer who builds projects to make everyday
+          tasks simpler.
+        </p>
+      </div>
+    </nav>
+
     <div class="hero-section">
       <div class="intro-content">
         <h1>Hello, I'm Zain.</h1>
@@ -28,6 +48,32 @@
     </div>
 
     <hr class="section-divider" />
+
+    <!-- Modal overlay that contains an iframe to load about.html -->
+    <div
+      id="about-modal"
+      class="modal"
+      role="dialog"
+      aria-modal="true"
+      aria-hidden="true"
+    >
+      <div class="modal-backdrop" data-action="close"></div>
+      <div class="modal-panel" role="document">
+        <button
+          class="modal-close"
+          aria-label="Close about dialog"
+          data-action="close"
+        >
+          ✕
+        </button>
+        <iframe
+          id="about-iframe"
+          src="about.html"
+          title="About"
+          frameborder="0"
+        ></iframe>
+      </div>
+    </div>
 
     <section class="projects-section">
       <div class="project-grid">
@@ -122,5 +168,6 @@
         </div>
       </div>
     </section>
+    <script src="script.js" defer></script>
   </body>
 </html>

@@ -34,6 +34,123 @@ body {
   color: #1d1d1f; /* A dark gray for better readability on a light background */
 }
 
+/* Top-right navbar button */
+.top-nav {
+  /* now part of normal flow so it scrolls away with the page */
+  display: flex;
+  justify-content: flex-end;
+  padding: 28px 6% 18px 10%; /* move content slightly further right by reducing right padding */
+  box-sizing: border-box;
+  position: relative;
+  z-index: 10; /* still above base content but not fixed */
+}
+
+.nav-button {
+  background: transparent;
+  border: none;
+  font-family: "Poppins", sans-serif;
+  font-weight: 600;
+  font-size: 1rem;
+  color: #1d1d1f;
+  padding: 8px 12px;
+  cursor: pointer;
+  border-radius: 6px;
+  transition: background-color 0.18s ease, transform 0.1s ease;
+}
+
+.nav-button:hover {
+  background-color: rgba(29, 29, 31, 0.06);
+}
+
+.nav-button:active {
+  transform: translateY(1px);
+}
+
+/* Small inline popover under the About button */
+.about-pop {
+  position: absolute;
+  top: 70px; /* nudged down to remain under the button */
+  right: 6%;
+  width: 280px;
+  background: #ffffff;
+  border-radius: 8px;
+  box-shadow: 0 8px 30px rgba(17, 17, 17, 0.15);
+  padding: 12px 14px;
+  color: #333;
+  font-size: 0.95rem;
+  display: none;
+}
+
+.about-pop[aria-hidden="false"] {
+  display: block;
+}
+
+.about-pop p {
+  margin: 0;
+  line-height: 1.4;
+}
+
+/* Modal styles (page-styled modal that looks like a new page) */
+.modal {
+  position: fixed;
+  inset: 0;
+  display: none; /* shown via JS */
+  align-items: center;
+  justify-content: center;
+  z-index: 1500;
+}
+
+.modal[aria-hidden="false"] {
+  display: flex;
+}
+
+.modal-backdrop {
+  position: absolute;
+  inset: 0;
+  background: rgba(13, 13, 13, 0.55);
+  backdrop-filter: blur(4px) saturate(1.05);
+}
+
+.modal-panel {
+  position: relative;
+  width: min(1100px, 95%);
+  height: min(85vh, 900px);
+  background: #ffffff;
+  border-radius: 12px;
+  box-shadow: 0 20px 60px rgba(17, 17, 17, 0.35);
+  overflow: hidden;
+  transform: translateY(18px) scale(0.96);
+  opacity: 0;
+  transform-origin: center center;
+  transition: transform 260ms cubic-bezier(0.2, 0.8, 0.2, 1), opacity 220ms ease;
+  z-index: 2;
+  display: flex;
+  flex-direction: column;
+}
+
+.modal[aria-hidden="false"] .modal-panel {
+  transform: translateY(0) scale(1);
+  opacity: 1;
+}
+
+.modal-close {
+  position: absolute;
+  top: 12px;
+  right: 12px;
+  border: none;
+  background: transparent;
+  font-size: 1.1rem;
+  cursor: pointer;
+  padding: 8px;
+}
+
+.modal-panel iframe {
+  border: 0;
+  width: 100%;
+  height: 100%;
+  display: block;
+}
+
 /* Custom text highlight color */
 ::selection {
   background-color: #1d1d1f; /* Black background */
@@ -46,6 +163,7 @@ body {
   align-items: center;
   justify-content: flex-start; /* Aligns content to the left */
   min-height: 100vh;
+  margin-top: -40px; /* nudge the hero section up slightly on desktop */
   padding: 0 10%; /* Adds horizontal padding */
   box-sizing: border-box;
 }
@@ -174,6 +292,7 @@ body {
     justify-content: center;
     text-align: center;
     min-height: 80vh;
+    margin-top: -20px; /* smaller upward nudge on mobile */
   }
 
   .intro-content h1 {
