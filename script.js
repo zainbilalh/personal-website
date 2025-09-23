@@ -19,9 +19,9 @@
     if (
       iframe &&
       (!iframe.getAttribute("src") ||
-        iframe.getAttribute("src") !== "about.html")
+        iframe.getAttribute("src") !== "./about.html")
     ) {
-      iframe.setAttribute("src", "about.html");
+      iframe.setAttribute("src", "./about.html");
     }
     document.body.style.overflow = "hidden";
     // small timeout to allow CSS transition
