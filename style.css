@@ -288,6 +288,9 @@ body {
 
 /* Responsive Design for smaller screens */
 @media (max-width: 768px) {
+  .hero-section .intro-content p {
+    color: #000000;
+  }
   .hero-section {
     justify-content: center;
     text-align: center;
